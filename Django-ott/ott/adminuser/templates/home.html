@@ -1,0 +1,176 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link href="{% static 'admin.css' %}" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+</head>
+<body style="background: rgb(41,11,22); background: linear-gradient(90deg, rgba(41,11,22,1) 0%, rgba(103,66,103,1) 100%);">
+
+    <nav class="navbar navbar-expand-lg navbar-light navbg" style="height: 90px;">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand text-white" href="#">OTT Platform</a>
+            <div class="collapse navbar-collapse justify-content-end">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item mx-2 mt-2">
+                        <a class="navbar-button" href="{% url 'adminhome' %}">Home</a>
+                    </li>
+                    <li class="nav-item mx-2 mt-2">
+                        <a class="navbar-button" href="#">Change Password</a>
+                    </li>
+                    <li class="nav-item mx-2 mt-2">
+                        <a  class="navbar-button " href="{% url 'usermanagement' %}">User Management</a>
+                    </li>
+                    <li class="nav-item mx-2 mt-2">
+                        <a class="navbar-button" href="">Subscription Management</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <div class="dropdown">
+                            <button class="navbar-button border p-2 dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                                Reports
+                            </button>
+                           
+                            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton">
+                                <li><a class="dropdown-item" href="#">Revenue Report</a></li>
+                                <li><a class="dropdown-item" href="{% url 'admincount' %}">Movie Count</a></li>
+                                <li><a class="dropdown-item" href="#">Subscription</a></li>
+                                <li><a class="dropdown-item" href="#">Rated Movies</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="sidebarMenu" aria-labelledby="sidebarLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="sidebarLabel">Admin</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul class="navbar-nav">
+                <li class="nav-item mt-2 btn btn-primary ">
+                    <a class="nav-link" href="{% url 'adminhome' %}">Home</a>
+                </li>
+                <li class="nav-item mt-2 btn btn-primary">
+                    <a class="nav-link" href="#">Change Password</a>
+                </li>
+                <li class="nav-item mt-2 btn btn-primary">
+                    <a class="nav-link" href="{% url 'usermanagement' %}">User Management</a>
+                </li>
+                <li class="nav-item mt-2 btn btn-primary">
+                    <a class="nav-link" href="#">Subscription Management</a>
+                </li>
+                <li class="nav-item mt-2 btn btn-primary">
+                    <div class="dropdown">
+                        <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                            Reports
+                        </button>
+                       
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <li><a class="dropdown-item btn btn-light" href="#">Revenue Report</a></li>
+                            <li><a class="dropdown-item btn btn-light" href="{% url 'admincount' %}">Movie Count</a></li>
+                            <li><a class="dropdown-item btn btn-light" href="#">Subscription</a></li>
+                            <li><a class="dropdown-item btn btn-light" href="#">Rated Movies</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-item mt-2 btn btn-primary">
+                    <a class="nav-link" href="#">Logout</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-6 mt-4">
+                <a href="{% url 'admincreate' %}" class="btn btn-primary">Create +</a>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-6 mt-4">
+                <form class="d-flex search ">
+                    <input class="form-control mx-2"  placeholder="Search" style="width: 150px;">
+                    <button class="btn btn-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="row mt-5 text-white">
+            {% for eachmovie in movies %}
+            <div class="col-12 col-md-12 col-sm-12">
+                <div class="d-flex justify-content-between align-items-center">
+                    <h4 class="me-5 mt-3">{{ eachmovie.title }}</h4>
+                    <div class="button-group">
+                        <a href="{% url 'adminview' eachmovie.id %}" class="btn btn-outline-primary me-3 mt-3 p-3">View</a>
+                        <a href="{% url 'adminedit' eachmovie.id %}" class="btn btn-outline-warning me-3 mt-3 p-3">Edit</a>
+                        <button type="button" class="btn btn-outline-danger me-3 mt-3" data-bs-toggle="modal" data-bs-target="#myModal{{ eachmovie.id }}">Delete</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="myModal{{ eachmovie.id }}" tabindex="-1" aria-labelledby="myModalLabel{{ eachmovie.id }}" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title m-auto text-danger" id="myModalLabel{{ eachmovie.id }}">Confirm Delete</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body text-dark">
+                            Are you sure you want to delete {{eachmovie.title}}?
+                        </div>
+                        <div class="modal-footer">
+                            <form action="{% url 'admindelete' eachmovie.id %}" method="POST" style="display: inline;">
+                                {% csrf_token %}
+                                <button type="submit" class="btn btn-success" data-bs-dismiss="modal">Yes</button>
+                            </form>
+                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancel</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    
+
+    
+
+    <div class="container mt-5">
+        <nav aria-label="Page navigation">
+            <ul class="pagination">
+                <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Previous">
+                        <span aria-hidden="true">&laquo; Previous</span>
+                    </a>
+                </li>
+                <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item">
+                    <a class="page-link" href="#" aria-label="Next">
+                        <span aria-hidden="true">Next &raquo;</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    
+
+</body>
+</html>

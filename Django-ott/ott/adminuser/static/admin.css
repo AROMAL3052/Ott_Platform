@@ -1,0 +1,180 @@
+.loginbgclr,.emailcardbg{
+    background-color: rgba(231, 225, 225, 0.181);     
+}
+.loginbody,.emailconfbody,.changepswdbody,.resetbodybg {
+    background: rgb(103,66,103);
+    background: linear-gradient(90deg, rgba(103,66,103,1) 0%, rgba(27,51,83,1) 73%);    
+}
+.homebg{
+    background: rgb(30,81,78);
+    background: linear-gradient(90deg, rgba(30,81,78,1) 39%, rgba(66,98,103,1) 100%);
+ }
+
+ .list-group-item {
+    background-color:transparent !important;
+    color: rgb(255, 255, 255) !important;
+    border: 1px solid white !important;
+}
+
+
+
+.offcanvas {
+    width: 250px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+
+.navbar-button {
+    background-color: #cdc8c8; 
+    color: rgb(0, 0, 0); 
+    text-decoration: none;
+    border-radius: 5px; 
+    padding: 9px 9px; 
+    
+}
+
+.navbar-button:hover {
+    background-color: #8c88be; 
+    box-shadow: #ebebee 0px 0px 15px 8px;
+}
+.search{
+    float: right;
+   
+}
+
+.btn-outline-primary,.btn-outline-warning,.btn-outline-danger{
+   width: 200px;
+   height: 50px;
+    
+    cursor: pointer;
+    
+}
+
+
+@media (max-width: 600px) {
+    .btn-outline-primary,.btn-outline-warning,.btn-outline-danger {
+    
+        width: 70px;
+        height: 40px;
+    }
+    .btnsize {
+    
+        width: 80px;
+        font-size: 11px !important;
+        height: 50px;
+    }
+    .textsize{
+        font-size: 18px;
+        margin-left: 20px !important;
+    }
+
+    
+   
+}
+
+@media (min-width: 600px) {
+    .btn-outline-primary,.btn-outline-warning,.btn-outline-danger {
+        padding-bottom: 5px;
+        font-size: 10px;
+        width: 100px;
+        height: 60px;
+    }
+    .btnsize {
+      
+        font-size: 14px !important;
+        width: 110px;
+        height: 60px;
+    }
+    .textsize{
+        font-size: 20px;
+    }
+     
+      }
+
+
+
+
+
+@media (min-width: 992px) {
+    .btn-outline-primary,.btn-outline-warning,.btn-outline-danger {
+        padding-bottom: 5px;
+        font-size: 10px;
+        width: 150px;
+        height: 60px;
+    }
+    .btnsize {
+       
+        font-size: 15px !important;
+        width: 110px;
+        height: 60px;
+    }
+    .textsize{
+        font-size: 25px;
+    }
+   
+      
+}
+
+
+.SMclr{
+    background: rgb(32,31,32);
+    background: linear-gradient(90deg, rgba(32,31,32,1) 6%, rgba(27,38,83,1) 100% );
+}
+
+
+
+
+  .fw-lighter{
+      font-size: 18px;
+  }
+
+  
+
+ .navbg{
+     
+        background-color: rgba(0, 0, 0, 0.5);    
+ }
+
+  .btn-custom {
+    max-width: 120px;
+     
+}
+
+.btn-custom {
+    flex: 1; 
+    min-width: 120px; 
+    padding: 10px 15px;
+     
+}
+
+.navbar-button {
+    padding: 0.5rem 1rem; 
+}
+
+.user-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+}
+
+.user-buttons {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 10px; 
+}
+
+@media (min-width: 768px) {
+    .user-item {
+        flex-direction: row; 
+        justify-content: space-between; 
+        align-items: center;
+    }
+
+    .user-buttons {
+        flex-direction: row; 
+    }
+}
+
+
+
+

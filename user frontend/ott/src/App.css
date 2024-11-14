@@ -1,0 +1,581 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+.confemailbody{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.img {
+    background-image: url('landingpage.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh; 
+    opacity: 0.9;
+}
+
+.navbarbg{
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 10px;
+}
+
+.btnclr{
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    font-size: 17px;
+   
+}
+
+.btnclr:hover{
+    background-color: rgb(211, 21, 21);
+    color: rgb(255, 255, 255);
+    font-size: 17px;
+}
+.signuptext,.logintext,.confemailtext,.changepswdtext,.resetpswrdtext{
+    font-family: monospace !important;
+}
+
+.landingtext1{
+    padding-top: 150px;
+    color: rgb(255, 255, 255);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.landingtext2{
+    padding-top: 30px;
+    color: rgb(255, 255, 255);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.landingbtn{
+    background-color:rgb(219, 30, 30) ;
+    padding: 10px 20px;
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.landingbtn:hover{
+    background-color:rgb(219, 30, 30) ;
+    box-shadow: 0 0 100px 15px white;
+}
+
+.streamztext{
+    color: rgb(255, 255, 255);
+    text-shadow: 0px -2px 4px #ff0000, 0px -2px 10px rgb(253, 7, 7), 0px -10px 20px         rgb(255, 0, 0), 0px -20px 40px rgb(255, 4, 4);
+}
+.streamztext:hover{
+    color: rgb(27, 27, 27);
+    text-shadow: 0px -2px 4px #eae444, 0px -2px 10px rgb(209, 209, 58), 0px -10px 20px         rgb(213, 213, 69), 0px -10px 20px rgb(219, 224, 63);
+}
+
+.confemailimg,.loginimg,.resetpswdimg,.signupimg{
+    background-image: url('blend.jpg');
+    margin: 0;
+    padding: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh; 
+    filter: grayscale(90%);
+}
+
+.changepswdimg {
+    background-image: url('blend.jpg');
+    background-size: cover;
+    background-position: center;
+    filter: grayscale(90%);
+}
+
+
+.card-body.forms {
+    border: 1px solid white;
+    border-radius: 50%; 
+    width: 500px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+
+
+.form-control {
+    max-width: 100%; 
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.btn-block {
+    margin-left: 65px; 
+    margin-top: 20px;
+}
+
+.form-control::placeholder {
+    color: white;
+    opacity: 1;
+}
+
+.form-control:focus {
+    background-color: transparent;
+   box-shadow: none;
+   outline: none;
+   border-color: rgb(14, 79, 58);
+   color: white;
+}
+
+.inputmt {
+    margin-top: 22px;
+}
+
+.signuptxt{
+    margin-right: 10px;
+}
+
+@media (max-width: 991px) {
+    
+    .card .add-btn {
+        padding: 0.2em 0.5em !important;
+    }
+    .rating:not(:checked) > label {
+        font-size: 20px !important;
+    }
+    .homebody .card-body {
+        height: 120px !important ;
+        
+    }
+    
+}
+
+@media (max-width: 768px) {
+    .card-body.forms {
+        width: 400px; 
+        height: 400px;
+    }
+    
+    .anchortag{
+       margin-top: 20px;
+       margin-left: 60px !important;
+    }
+    .logincard{
+        margin-top: 5%;
+       
+     }
+     .btn-block {
+        margin-left: 45px; 
+        margin-top: 20px;
+    }
+    .changepswdtext{
+        font-size: 25px;
+        margin-right:19px ;
+    }
+    .confemailtext{
+        margin-right: 20px;
+    }
+    .signupbtn{
+        padding: 5px 25px !important;
+        margin-bottom: 5px;
+    } 
+    .custom-icon {
+        font-size: 1.2rem !important;
+      }
+     
+     
+}
+
+
+@media (mix-width: 576px) {
+     
+    .logincard{
+        margin-top: 5%;
+        margin-right: 50px !important;
+     }
+    
+    .form-control {
+        width: 70%; 
+    }
+   
+    .anchortag{
+        margin-left: 20px !important;
+        margin-top: 20px;
+    }
+    .btn-block {
+        margin-left: 35px !important; 
+        margin-top: 20px;
+    }
+    .anchor{
+        text-decoration: none;
+        color: white;
+        margin-left: 20px !important;
+    }
+    
+    
+}
+
+
+.btnclr2{
+    background-color: rgb(244, 243, 242);
+    color: black !important;
+    padding: 5px 50px;
+    margin-right: 55px;
+}
+
+
+.btnclr2:hover,.logoutbtn:hover{
+    background-color: rgb(172, 17, 17);
+    color: white !important;
+}
+.anchortag{
+    margin-left: 80px;
+    margin-top: 20px;
+    
+}
+.anchor{
+    text-decoration: none;
+    color: white;
+}
+
+.navbtnclr{
+    background-color: white;
+}
+
+
+/* ......................................... */
+
+.subscribebody{
+    background: rgb(0,0,0);
+    background-position: center center;
+    background-image: url('https://wallpaperaccess.com/full/5728595.jpg');
+    min-height: 100vh;
+    overflow-x: hidden;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+}
+.plancard{
+    backdrop-filter: blur(0px) saturate(200%);
+    background-color: transparent;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.966); 
+    min-width: 100%;
+    
+}
+.plancard:hover{
+    background: rgb(0,0,0);
+    background: linear-gradient(90deg, rgb(0, 0, 0) 40%, rgb(57, 57, 175) 90%);
+    box-shadow: 0 0 50px 10px ;
+    transform: translateY(-15px) scale(1);
+}
+.planbtn{
+    background-color: transparent;
+    color: white;
+    border: 1px solid white;
+    padding: 5px 5px;
+    font-size: 13px;
+    z-index: 1;
+    position: relative;
+    padding: 0.5em 1em;
+    overflow: hidden;
+    transition: color 0.4s ease-in-out;
+}
+ 
+  .planbtn::before {
+    content: '';
+    z-index: -1;
+    position: absolute;
+    bottom: 100%;
+    right: 100%;
+    width: 1em;
+    height: 1em;
+    background-color: #145c21;
+    transform-origin: center;
+    transform: translate3d(50%, 50%, 0) scale3d(0, 0, 0);
+    transition: transform 0.45s ease-in-out;
+  }
+  
+  .planbtn:hover {
+    cursor: pointer;
+    color: #ffffff;
+  }
+  
+  .planbtn:hover::before {
+    transform: translate3d(50%, 50%, 0) scale3d(15, 15, 15);
+  }
+  
+
+.table-responsive.rounded{
+    border-radius: 1rem;
+}
+/* ................................. */
+
+
+
+.rating {
+    display: flex;
+    flex-wrap: nowrap;
+    margin-bottom: 0.5em;
+}
+
+.rating:not(:checked) > input {
+    position: absolute;
+    appearance: none;
+}
+
+.rating:not(:checked) > label {
+    float: right;
+    cursor: pointer;
+    font-size: 23px;
+    color: #000000;
+}
+
+.rating:not(:checked) > label:before {
+    content: '★';
+}
+
+.rating > input:checked ~ label {
+    color: #ffa723;
+}
+
+.rating:not(:checked) > label:hover,
+.rating:not(:checked) > label:hover ~ label {
+    color: #ff9e0b;
+}
+
+
+
+
+
+  /* ............................. */
+
+
+  .search-box{
+    width: fit-content;
+    height: fit-content;
+    position: relative;
+  }
+  .input-search{
+    height: 50px;
+    width: 50px;
+    border-style: none;
+    padding: 10px;
+    font-size: 18px;
+    letter-spacing: 2px;
+    outline: none;
+    border-radius: 25px;
+    transition: all .5s ease-in-out;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding-right: 40px;
+    color:#ffffff;
+  }
+
+  .input-search::placeholder{
+    color:rgba(255,255,255,.5);
+    font-size: 18px;
+    letter-spacing: 2px;
+    font-weight: 100;
+  }
+
+  .btn-search{
+    width: 50px;
+    height: 50px;
+    border-style: none;
+    font-size: 20px;
+    font-weight: bold;
+    outline: none;
+    cursor: pointer;
+    border-radius: 50%;
+    position: absolute;
+    right: 0px;
+    color:hsl(0, 12%, 97%) ;
+    background-color:transparent;
+    pointer-events: painted;  
+  }
+
+  .btn-search:focus ~ .input-search{
+    width: 300px;
+    border-radius: 0px;
+    background-color: transparent;
+    border-bottom:1px solid rgba(255,255,255,.5);
+    transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
+  }
+
+  .input-search:focus{
+    width: 300px;
+    border-radius: 0px;
+    background-color: transparent;
+    border-bottom:1px solid rgba(255,255,255,.5);
+    transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
+  }
+
+
+ .homesearchmargin {
+    padding-top: 50px;
+    padding-bottom: 50px; 
+  }
+
+  .homenavstyle {
+    width: 100%; 
+  }
+
+  .homenavclr:hover{
+    color: red !important;
+  }
+
+
+.homebody{
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(0,0,0);
+    background: rgb(0,0,0);
+    background: rgb(0,0,0);
+    background-position: center center;
+    background-image: url('https://wallpaperaccess.com/full/5728595.jpg');
+    background-origin: content-box;
+    background-size: cover;
+    background-attachment: fixed;
+    overflow-x: hidden;
+  }
+  
+  
+ 
+  /* ................................... */
+
+  .homebody .card {
+    border: 1px solid rgb(63, 61, 61);
+    background-color: transparent !important;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.homebody .card:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+.homebody .card-img {
+    transition: transform 0.3s ease;
+    width: 100%;
+    height: auto;
+}
+
+
+
+.homebody.card-title{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.homebody .card:hover .card-img {
+
+    transform: scale(1.1);
+}
+
+.viewcard,.planbody{
+   
+    background-image: url('https://wallpaperaccess.com/full/5728595.jpg');
+
+}
+
+
+.custom-icon {
+    font-size: 1.5rem;
+  }
+  .custom-icon:hover {
+    color: #000000;
+  }
+
+
+  /* .......................................... */
+
+ /* logout button */ 
+.Btn {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    transition-duration: .3s;
+    background-color: transparent;
+  }
+  
+
+  .sign {
+    width: 100%;
+    transition-duration: .3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .sign svg {
+    width: 16px;
+  }
+  
+  .sign svg path {
+    fill: white;
+  }
+
+  .text {
+    position: absolute;
+    right: 0%;
+    width: 0%;
+    top: 13%;
+    opacity: 0;
+    color: white;
+    font-size: 1.1em;
+    font-weight: 500;
+    transition-duration: .3s;
+  }
+
+  .Btn:hover {
+    width: 125px;
+    border-radius: 40px;
+    transition-duration: .3s;
+  }
+  
+  .Btn:hover .sign {
+    width: 30%;
+    transition-duration: .3s;
+    padding-left: 20px;
+  }
+  .Btn:hover .text {
+    opacity: 1;
+    width: 70%;
+    transition-duration: .3s;
+    padding-right: 10px;
+  }
+ 
+  .passwordeyecontainer {
+    position: relative; 
+  }
+  
+  .inputs-icon {
+    position: absolute;
+    right: 10px; 
+    top: 50%; 
+    transform: translateY(-50%); 
+    cursor: pointer;
+    font-size: 18px; 
+    color: #6c757d; 
+  }
+  
+  .inputs {
+    padding-right: 40px; 
+  }
